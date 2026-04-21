@@ -1,1 +1,221 @@
+تصميم احترافي لتطبيق "gava" بالعربية، مع واجهة متجاوبة وجذابة تناسب تطبيقات الجوال والويب. إليك الكود الكامل باستخدام HTML + Tailwind CSS:
 
+ 
+
+📱 صفحة رئيسية للتطبيق (index.html)
+
+ 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gava - تطبيقك الرقمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        body { font-family: 'Tajawal', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- رأس الصفحة -->
+    <header class="gradient-bg text-white py-6 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-cube text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold">gava</h1>
+            </div>
+            <nav>
+                <button class="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition">
+                    <i class="fas fa-user mr-2"></i>تسجيل الدخول
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- قسم الترحيب -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مرحباً بك في تطبيق gava</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">حلول رقمية متكاملة لتسهيل حياتك اليومية مع تجربة استخدام سهلة ومبتكرة</p>
+        </section>
+
+        <!-- البطاقات الرئيسية -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- بطاقة 1 -->
+            <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-xl transition">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">خدمات متنوعة</h3>
+                <p class="text-gray-600 text-center">وصول سريع إلى جميع الخدمات الرقمية التي تحتاجها</p>
+            </div>
+
+            <!-- بطاقة 2 -->
+            <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-xl transition">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">آمنة وموثوقة</h3>
+                <p class="text-gray-600 text-center">حماية بياناتك بأحدث تقنيات الأمان</p>
+            </div>
+
+            <!-- بطاقة 3 -->
+            <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-xl transition">
+                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">تحليلات ذكية</h3>
+                <p class="text-gray-600 text-center">رؤى دقيقة لاتخاذ قرارات أفضل</p>
+            </div>
+        </section>
+
+        <!-- قسم الأدوات -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">أدواتنا المميزة</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button class="bg-white p-4 rounded-lg flex flex-col items-center hover:bg-blue-50 transition">
+                    <i class="fas fa-wallet text-blue-500 text-3xl mb-2"></i>
+                    <span class="font-medium">المحفظة</span>
+                </button>
+                <button class="bg-white p-4 rounded-lg flex flex-col items-center hover:bg-blue-50 transition">
+                    <i class="fas fa-exchange-alt text-green-500 text-3xl mb-2"></i>
+                    <span class="font-medium">التحويلات</span>
+                </button>
+                <button class="bg-white p-4 rounded-lg flex flex-col items-center hover:bg-blue-50 transition">
+                    <i class="fas fa-file-invoice text-purple-500 text-3xl mb-2"></i>
+                    <span class="font-medium">الفواتير</span>
+                </button>
+                <button class="bg-white p-4 rounded-lg flex flex-col items-center hover:bg-blue-50 transition">
+                    <i class="fas fa-history text-orange-500 text-3xl mb-2"></i>
+                    <span class="font-medium">السجل</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- قسم CTA -->
+        <section class="text-center py-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+            <h3 class="text-2xl font-bold mb-4">جرب gava الآن!</h3>
+            <p class="mb-6">انضم لملايين المستخدمين الذين يعتمدون على gava</p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
+                <i class="fas fa-download mr-2"></i>تنزيل التطبيق
+            </button>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-12">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-blue-300"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+            <p class="text-gray-400">© 2023 gava. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+</body>
+</html>
+ 
+
+ 
+
+🎨 مميزات التصميم:
+
+لغة عربية كاملة مع دعم RTL
+تصميم متجاوب يعمل على جميع الأجهزة
+ألوان احترافية:
+تدرج أزرق للخلفيات الرئيسية
+ألوان زاهية للبطاقات (أزرق، أخضر، بنفسجي)
+أيقونات Font Awesome للمظهر الحديث
+خط Tajawal المخصص للغة العربية
+تفاعلات بصرية عند التمرير فوق العناصر
+
+ 
+
+🚀 كيفية الاستخدام:
+
+احفظ الكود في ملف  index.html 
+افتح الملف في متصفح الويب
+لتخصيص التطبيق:
+غيّر الألوان في قسم  <style> 
+عدّل الأيقونات في  <i class="..."> 
+أضف روابط حقيقية في قسم التنزيل
+
+ 
+
+📱 نموذج صفحة تسجيل الدخول (login.html)
+
+ 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول - gava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        body { font-family: 'Tajawal', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+        <div class="text-center mb-8">
+            <i class="fas fa-cube text-5xl text-blue-600 mb-4"></i>
+            <h2 class="text-2xl font-bold text-gray-800">مرحباً بك</h2>
+            <p class="text-gray-600">سجل دخولك لاستخدام التطبيق</p>
+        </div>
+        
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">البريد الإلكتروني</label>
+                <div class="relative">
+                    <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
+                    <input type="email" class="w-full pr-10 pl-10 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="name@example.com">
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 mb-2">كلمة المرور</label>
+                <div class="relative">
+                    <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+                    <input type="password" class="w-full pr-10 pl-10 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="••••••••">
+                    <i class="fas fa-eye absolute left-3 bottom-3 text-gray-400 cursor-pointer"></i>
+                </div>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                تسجيل الدخول
+            </button>
+        </form>
+        
+        <div class="text-center mt-6">
+            <a href="#" class="text-blue-600 hover:underline">نسيت كلمة المرور؟</a>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-gray-600">ليس لديك حساب؟ <a href="#" class="text-blue-600 font-bold hover:underline">إنشاء حساب</a></p>
+        </div>
+    </div>
+</body>
+</html>
+ 
+
+ 
+
+📌 ملاحظات للتحسين:
+
+أضع صورتك الشخصية أو شعار التطبيق في قسم الترحيب
+أضف قسم "لماذا gava" لزيادة التحويل
+استخدم صوراً عالية الجودة في قسم الخدمات
+أضف تأثيرات حركية باستخدام JavaScript
+أعدل الألوان لتتوافق مع هوية علامتك التجارية
+
+هل تريد إضافة صفحات أخرى (مثل: لوحة التحكم، الإعدادات، الدعم)؟ 😊
